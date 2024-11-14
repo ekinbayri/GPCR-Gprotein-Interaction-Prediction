@@ -1,0 +1,149 @@
+From	Entry	Reviewed	Entry Name	Protein names	Gene Names	Organism	Length
+F2RL2	O00254	reviewed	PAR3_HUMAN	Proteinase-activated receptor 3 (PAR-3) (Coagulation factor II receptor-like 2) (Thrombin receptor-like 2)	F2RL2 PAR3	Homo sapiens (Human)	374
+P2RY10	O00398	reviewed	P2Y10_HUMAN	Putative P2Y purinoceptor 10 (P2Y10) (P2Y-like receptor)	P2RY10	Homo sapiens (Human)	339
+FFAR1	O14842	reviewed	FFAR1_HUMAN	Free fatty acid receptor 1 (G-protein coupled receptor 40)	FFAR1 GPR40	Homo sapiens (Human)	300
+FFAR3	O14843	reviewed	FFAR3_HUMAN	Free fatty acid receptor 3 (G-protein coupled receptor 41)	FFAR3 GPR41	Homo sapiens (Human)	346
+FFAR2	O15552	reviewed	FFAR2_HUMAN	Free fatty acid receptor 2 (G-protein coupled receptor 43)	FFAR2 FFA2 GPCR43 GPR43	Homo sapiens (Human)	330
+MLNR	O43193	reviewed	MTLR_HUMAN	Motilin receptor (G-protein coupled receptor 38)	MLNR GPR38 MTLR MTLR1	Homo sapiens (Human)	412
+GALR2	O43603	reviewed	GALR2_HUMAN	Galanin receptor type 2 (GAL2-R) (GALR-2)	GALR2 GALNR2	Homo sapiens (Human)	387
+HCRTR1	O43613	reviewed	OX1R_HUMAN	Orexin/Hypocretin receptor type 1 (Hypocretin receptor type 1) (Orexin receptor type 1) (Ox-1-R) (Ox1-R) (Ox1R)	HCRTR1	Homo sapiens (Human)	425
+HCRTR2	O43614	reviewed	OX2R_HUMAN	Orexin receptor type 2 (Ox-2-R) (Ox2-R) (Ox2R) (Hypocretin receptor type 2)	HCRTR2	Homo sapiens (Human)	444
+GALR3	O60755	reviewed	GALR3_HUMAN	Galanin receptor type 3 (GAL3-R) (GALR-3)	GALR3 GALNR3	Homo sapiens (Human)	368
+S1PR2	O95136	reviewed	S1PR2_HUMAN	Sphingosine 1-phosphate receptor 2 (S1P receptor 2) (S1P2) (Endothelial differentiation G-protein coupled receptor 5) (Sphingosine 1-phosphate receptor Edg-5) (S1P receptor Edg-5)	S1PR2 EDG5	Homo sapiens (Human)	353
+ADRB2	P07550	reviewed	ADRB2_HUMAN	Beta-2 adrenergic receptor (Beta-2 adrenoreceptor) (Beta-2 adrenoceptor)	ADRB2 ADRB2R B2AR	Homo sapiens (Human)	413
+CHRM2	P08172	reviewed	ACM2_HUMAN	Muscarinic acetylcholine receptor M2	CHRM2	Homo sapiens (Human)	466
+CHRM4	P08173	reviewed	ACM4_HUMAN	Muscarinic acetylcholine receptor M4	CHRM4	Homo sapiens (Human)	479
+ADRB1	P08588	reviewed	ADRB1_HUMAN	Beta-1 adrenergic receptor (Beta-1 adrenoreceptor) (Beta-1 adrenoceptor)	ADRB1 ADRB1R B1AR	Homo sapiens (Human)	477
+HTR1A	P08908	reviewed	5HT1A_HUMAN	5-hydroxytryptamine receptor 1A (5-HT-1A) (5-HT1A) (G-21) (Serotonin receptor 1A)	HTR1A ADRB2RL1 ADRBRL1	Homo sapiens (Human)	422
+CHRM5	P08912	reviewed	ACM5_HUMAN	Muscarinic acetylcholine receptor M5	CHRM5	Homo sapiens (Human)	532
+ADRA2A	P08913	reviewed	ADA2A_HUMAN	Alpha-2A adrenergic receptor (Alpha-2 adrenergic receptor subtype C10) (Alpha-2A adrenoreceptor) (Alpha-2A adrenoceptor) (Alpha-2AAR)	ADRA2A ADRA2R ADRAR	Homo sapiens (Human)	465
+ADORA3	P0DMS8	reviewed	AA3R_HUMAN	Adenosine receptor A3	ADORA3	Homo sapiens (Human)	318
+CHRM1	P11229	reviewed	ACM1_HUMAN	Muscarinic acetylcholine receptor M1	CHRM1	Homo sapiens (Human)	460
+ADRB3	P13945	reviewed	ADRB3_HUMAN	Beta-3 adrenergic receptor (Beta-3 adrenoreceptor) (Beta-3 adrenoceptor)	ADRB3 ADRB3R B3AR	Homo sapiens (Human)	408
+DRD2	P14416	reviewed	DRD2_HUMAN	D(2) dopamine receptor (Dopamine D2 receptor)	DRD2	Homo sapiens (Human)	443
+ADRA2B	P18089	reviewed	ADA2B_HUMAN	Alpha-2B adrenergic receptor (Alpha-2 adrenergic receptor subtype C2) (Alpha-2B adrenoreceptor) (Alpha-2B adrenoceptor) (Alpha-2BAR)	ADRA2B ADRA2L1 ADRA2RL1	Homo sapiens (Human)	450
+ADRA2C	P18825	reviewed	ADA2C_HUMAN	Alpha-2C adrenergic receptor (Alpha-2 adrenergic receptor subtype C4) (Alpha-2C adrenoreceptor) (Alpha-2C adrenoceptor) (Alpha-2CAR)	ADRA2C ADRA2L2 ADRA2RL2	Homo sapiens (Human)	462
+CHRM3	P20309	reviewed	ACM3_HUMAN	Muscarinic acetylcholine receptor M3	CHRM3	Homo sapiens (Human)	590
+TACR2	P21452	reviewed	NK2R_HUMAN	Substance-K receptor (SKR) (NK-2 receptor) (NK-2R) (Neurokinin A receptor) (Tachykinin receptor 2)	TACR2 NK2R NKNAR TAC2R	Homo sapiens (Human)	398
+S1PR1	P21453	reviewed	S1PR1_HUMAN	Sphingosine 1-phosphate receptor 1 (S1P receptor 1) (S1P1) (Endothelial differentiation G-protein coupled receptor 1) (Sphingosine 1-phosphate receptor Edg-1) (S1P receptor Edg-1) (CD antigen CD363)	S1PR1 CHEDG1 EDG1	Homo sapiens (Human)	382
+FPR1	P21462	reviewed	FPR1_HUMAN	fMet-Leu-Phe receptor (fMLP receptor) (N-formyl peptide receptor) (FPR) (N-formylpeptide chemoattractant receptor)	FPR1	Homo sapiens (Human)	350
+CNR1	P21554	reviewed	CNR1_HUMAN	Cannabinoid receptor 1 (CB-R) (CB1) (CANN6)	CNR1 CNR	Homo sapiens (Human)	472
+DRD1	P21728	reviewed	DRD1_HUMAN	D(1A) dopamine receptor (Dopamine D1 receptor)	DRD1	Homo sapiens (Human)	446
+TBXA2R	P21731	reviewed	TA2R_HUMAN	Thromboxane A2 receptor (TXA2-R) (Prostanoid TP receptor)	TBXA2R	Homo sapiens (Human)	343
+DRD4	P21917	reviewed	DRD4_HUMAN	D(4) dopamine receptor (D(2C) dopamine receptor) (Dopamine D4 receptor)	DRD4	Homo sapiens (Human)	419
+DRD5	P21918	reviewed	DRD5_HUMAN	D(1B) dopamine receptor (D(5) dopamine receptor) (D1beta dopamine receptor) (Dopamine D5 receptor)	DRD5 DRD1B DRD1L2	Homo sapiens (Human)	477
+EDNRB	P24530	reviewed	EDNRB_HUMAN	Endothelin receptor type B (ET-B) (ET-BR) (Endothelin receptor non-selective type)	EDNRB ETRB	Homo sapiens (Human)	442
+HRH2	P25021	reviewed	HRH2_HUMAN	Histamine H2 receptor (H2R) (HH2R) (Gastric receptor I)	HRH2	Homo sapiens (Human)	359
+FPR2	P25090	reviewed	FPR2_HUMAN	N-formyl peptide receptor 2 (FMLP-related receptor I) (FMLP-R-I) (Formyl peptide receptor-like 1) (HM63) (Lipoxin A4 receptor) (LXA4 receptor) (RFP)	FPR2 FPRH1 FPRL1 LXA4R	Homo sapiens (Human)	351
+ADRA1A	P25100	reviewed	ADA1D_HUMAN	Alpha-1D adrenergic receptor (Alpha-1A adrenergic receptor) (Alpha-1D adrenoreceptor) (Alpha-1D adrenoceptor) (Alpha-adrenergic receptor 1a)	ADRA1D ADRA1A	Homo sapiens (Human)	572
+EDNRA	P25101	reviewed	EDNRA_HUMAN	Endothelin-1 receptor (Endothelin receptor type A) (ET-A) (ETA-R) (hET-AR)	EDNRA ETA ETRA	Homo sapiens (Human)	427
+TACR1	P25103	reviewed	NK1R_HUMAN	Substance-P receptor (SPR) (NK-1 receptor) (NK-1R) (Tachykinin receptor 1)	TACR1 NK1R TAC1R	Homo sapiens (Human)	407
+PTAFR	P25105	reviewed	PTAFR_HUMAN	Platelet-activating factor receptor (PAF-R) (PAFr)	PTAFR PAFR	Homo sapiens (Human)	342
+F2R	P25116	reviewed	PAR1_HUMAN	Proteinase-activated receptor 1 (PAR-1) (Coagulation factor II receptor) (Thrombin receptor)	F2R CF2R PAR1 TR	Homo sapiens (Human)	425
+HTR1D	P28221	reviewed	5HT1D_HUMAN	5-hydroxytryptamine receptor 1D (5-HT-1D) (5-HT1D) (Serotonin 1D alpha receptor) (5-HT-1D-alpha) (Serotonin receptor 1D)	HTR1D HTR1DA HTRL	Homo sapiens (Human)	377
+HTR1B	P28222	reviewed	5HT1B_HUMAN	5-hydroxytryptamine receptor 1B (5-HT-1B) (5-HT1B) (S12) (Serotonin 1D beta receptor) (5-HT-1D-beta) (Serotonin receptor 1B)	HTR1B HTR1DB	Homo sapiens (Human)	390
+HTR2A	P28223	reviewed	5HT2A_HUMAN	5-hydroxytryptamine receptor 2A (5-HT-2) (5-HT-2A) (Serotonin receptor 2A)	HTR2A HTR2	Homo sapiens (Human)	471
+HTR2C	P28335	reviewed	5HT2C_HUMAN	5-hydroxytryptamine receptor 2C (5-HT-2C) (5-HT2C) (5-HTR2C) (5-hydroxytryptamine receptor 1C) (5-HT-1C) (5-HT1C) (Serotonin receptor 2C)	HTR2C HTR1C	Homo sapiens (Human)	458
+NMBR	P28336	reviewed	NMBR_HUMAN	Neuromedin-B receptor (NMB-R) (Epididymis tissue protein Li 185a) (Neuromedin-B-preferring bombesin receptor)	NMBR	Homo sapiens (Human)	390
+HTR1E	P28566	reviewed	5HT1E_HUMAN	5-hydroxytryptamine receptor 1E (5-HT-1E) (5-HT1E) (S31) (Serotonin receptor 1E)	HTR1E	Homo sapiens (Human)	365
+ADORA2A	P29274	reviewed	AA2AR_HUMAN	Adenosine receptor A2a	ADORA2A ADORA2	Homo sapiens (Human)	412
+ADORA2B	P29275	reviewed	AA2BR_HUMAN	Adenosine receptor A2b	ADORA2B	Homo sapiens (Human)	332
+TACR3	P29371	reviewed	NK3R_HUMAN	Neuromedin-K receptor (NKR) (NK-3 receptor) (NK-3R) (Neurokinin B receptor) (Tachykinin receptor 3)	TACR3 NK3R TAC3R	Homo sapiens (Human)	465
+BDKRB2	P30411	reviewed	BKRB2_HUMAN	B2 bradykinin receptor (B2R) (BK-2 receptor)	BDKRB2 BKR2	Homo sapiens (Human)	391
+AVPR2	P30518	reviewed	V2R_HUMAN	Vasopressin V2 receptor (V2R) (AVPR V2) (Antidiuretic hormone receptor) (Renal-type arginine vasopressin receptor)	AVPR2 ADHR DIR DIR3 V2R	Homo sapiens (Human)	371
+ADORA1	P30542	reviewed	AA1R_HUMAN	Adenosine receptor A1	ADORA1	Homo sapiens (Human)	326
+GRPR	P30550	reviewed	GRPR_HUMAN	Gastrin-releasing peptide receptor (GRP-R) (GRP-preferring bombesin receptor)	GRPR	Homo sapiens (Human)	384
+AGTR1	P30556	reviewed	AGTR1_HUMAN	Type-1 angiotensin II receptor (AT1AR) (AT1BR) (Angiotensin II type-1 receptor) (AT1 receptor)	AGTR1 AGTR1A AGTR1B AT2R1 AT2R1B	Homo sapiens (Human)	359
+OXTR	P30559	reviewed	OXYR_HUMAN	Oxytocin receptor (OT-R)	OXTR	Homo sapiens (Human)	389
+SSTR1	P30872	reviewed	SSR1_HUMAN	Somatostatin receptor type 1 (SS-1-R) (SS1-R) (SS1R) (SST1) (SRIF-2)	SSTR1	Homo sapiens (Human)	391
+SSTR2	P30874	reviewed	SSR2_HUMAN	Somatostatin receptor type 2 (SS-2-R) (SS2-R) (SS2R) (SST2) (SRIF-1)	SSTR2	Homo sapiens (Human)	369
+HTR1F	P30939	reviewed	5HT1F_HUMAN	5-hydroxytryptamine receptor 1F (5-HT-1F) (5-HT1F) (Serotonin receptor 1F)	HTR1F HTR1EL	Homo sapiens (Human)	366
+GNRHR	P30968	reviewed	GNRHR_HUMAN	Gonadotropin-releasing hormone receptor (GnRH receptor) (GnRH-R)	GNRHR GRHR	Homo sapiens (Human)	328
+SSTR4	P31391	reviewed	SSR4_HUMAN	Somatostatin receptor type 4 (SS-4-R) (SS4-R) (SS4R) (SST4)	SSTR4	Homo sapiens (Human)	388
+CCKAR	P32238	reviewed	CCKAR_HUMAN	Cholecystokinin receptor type A (CCK-A receptor) (CCK-AR) (Cholecystokinin-1 receptor) (CCK1-R)	CCKAR CCKRA	Homo sapiens (Human)	428
+CCKBR	P32239	reviewed	GASR_HUMAN	Gastrin/cholecystokinin type B receptor (CCK-B receptor) (CCK-BR) (Cholecystokinin-2 receptor) (CCK2-R)	CCKBR CCKRB	Homo sapiens (Human)	447
+MC4R	P32245	reviewed	MC4R_HUMAN	Melanocortin receptor 4 (MC4-R)	MC4R	Homo sapiens (Human)	332
+GPR183	P32249	reviewed	GP183_HUMAN	G-protein coupled receptor 183 (Epstein-Barr virus-induced G-protein coupled receptor 2) (EBI2) (EBV-induced G-protein coupled receptor 2) (hEBI2)	GPR183 EBI2	Homo sapiens (Human)	361
+SSTR3	P32745	reviewed	SSR3_HUMAN	Somatostatin receptor type 3 (SS-3-R) (SS3-R) (SS3R) (SST3) (SSR-28)	SSTR3	Homo sapiens (Human)	418
+MC5R	P33032	reviewed	MC5R_HUMAN	Melanocortin receptor 5 (MC5-R) (MC-2)	MC5R	Homo sapiens (Human)	325
+HTR7	P34969	reviewed	5HT7R_HUMAN	5-hydroxytryptamine receptor 7 (5-HT-7) (5-HT7) (5-HT-X) (Serotonin receptor 7)	HTR7	Homo sapiens (Human)	479
+CNR2	P34972	reviewed	CNR2_HUMAN	Cannabinoid receptor 2 (CB-2) (CB2) (hCB2) (CX5)	CNR2 CB2A CB2B	Homo sapiens (Human)	360
+PTGER1	P34995	reviewed	PE2R1_HUMAN	Prostaglandin E2 receptor EP1 subtype (PGE receptor EP1 subtype) (PGE2 receptor EP1 subtype) (Prostanoid EP1 receptor)	PTGER1	Homo sapiens (Human)	402
+SSTR5	P35346	reviewed	SSR5_HUMAN	Somatostatin receptor type 5 (SS-5-R) (SS5-R) (SS5R) (SST5)	SSTR5	Homo sapiens (Human)	364
+ADRA1A	P35348	reviewed	ADA1A_HUMAN	Alpha-1A adrenergic receptor (Alpha-1A adrenoreceptor) (Alpha-1A adrenoceptor) (Alpha-1C adrenergic receptor) (Alpha-adrenergic receptor 1c)	ADRA1A ADRA1C	Homo sapiens (Human)	466
+HRH1	P35367	reviewed	HRH1_HUMAN	Histamine H1 receptor (H1-R) (H1R) (HH1R)	HRH1	Homo sapiens (Human)	487
+ADRA1B	P35368	reviewed	ADA1B_HUMAN	Alpha-1B adrenergic receptor (Alpha-1B adrenoreceptor) (Alpha-1B adrenoceptor)	ADRA1B	Homo sapiens (Human)	520
+OPRM1	P35372	reviewed	OPRM_HUMAN	Mu-type opioid receptor (M-OR-1) (MOR-1) (Mu opiate receptor) (Mu opioid receptor) (MOP) (hMOP)	OPRM1 MOR1	Homo sapiens (Human)	400
+PTGER2	P35408	reviewed	PE2R4_HUMAN	Prostaglandin E2 receptor EP4 subtype (PGE receptor EP4 subtype) (PGE2 receptor EP4 subtype) (Prostanoid EP4 receptor)	PTGER4 PTGER2	Homo sapiens (Human)	488
+APLNR	P35414	reviewed	APJ_HUMAN	Apelin receptor (Angiotensin receptor-like 1) (G-protein coupled receptor APJ) (G-protein coupled receptor HG11)	APLNR AGTRL1 APJ	Homo sapiens (Human)	380
+DRD3	P35462	reviewed	DRD3_HUMAN	D(3) dopamine receptor (Dopamine D3 receptor)	DRD3	Homo sapiens (Human)	400
+AVPR1A	P37288	reviewed	V1AR_HUMAN	Vasopressin V1a receptor (V1aR) (AVPR V1a) (Antidiuretic hormone receptor 1a) (Vascular/hepatic-type arginine vasopressin receptor)	AVPR1A AVPR1	Homo sapiens (Human)	418
+OPRD1	P41143	reviewed	OPRD_HUMAN	Delta-type opioid receptor (D-OR-1) (DOR-1)	OPRD1 OPRD	Homo sapiens (Human)	372
+OPRK1	P41145	reviewed	OPRK_HUMAN	Kappa-type opioid receptor (K-OR-1) (KOR-1)	OPRK1 OPRK	Homo sapiens (Human)	380
+OPRL1	P41146	reviewed	OPRX_HUMAN	Nociceptin receptor (Kappa-type 3 opioid receptor) (KOR-3) (Orphanin FQ receptor)	OPRL1 OOR ORL1	Homo sapiens (Human)	370
+P2RY2	P41231	reviewed	P2RY2_HUMAN	P2Y purinoceptor 2 (P2Y2) (ATP receptor) (P2U purinoceptor 1) (P2U1) (P2U receptor 1) (Purinergic receptor)	P2RY2 P2RU1	Homo sapiens (Human)	377
+ADCYAP1R1	P41586	reviewed	PACR_HUMAN	Pituitary adenylate cyclase-activating polypeptide type I receptor (PACAP type I receptor) (PACAP-R-1) (PACAP-R1)	ADCYAP1R1	Homo sapiens (Human)	468
+HTR2B	P41595	reviewed	5HT2B_HUMAN	5-hydroxytryptamine receptor 2B (5-HT-2B) (5-HT2B) (Serotonin receptor 2B)	HTR2B	Homo sapiens (Human)	481
+MC3R	P41968	reviewed	MC3R_HUMAN	Melanocortin receptor 3 (MC3-R)	MC3R	Homo sapiens (Human)	323
+PTGFR	P43088	reviewed	PF2R_HUMAN	Prostaglandin F2-alpha receptor (PGF receptor) (PGF2-alpha receptor) (Prostanoid FP receptor)	PTGFR	Homo sapiens (Human)	359
+PTGER3	P43115	reviewed	PE2R3_HUMAN	Prostaglandin E2 receptor EP3 subtype (PGE receptor EP3 subtype) (PGE2 receptor EP3 subtype) (PGE2-R) (Prostanoid EP3 receptor)	PTGER3	Homo sapiens (Human)	390
+PTGER2	P43116	reviewed	PE2R2_HUMAN	Prostaglandin E2 receptor EP2 subtype (PGE receptor EP2 subtype) (PGE2 receptor EP2 subtype) (Prostanoid EP2 receptor)	PTGER2	Homo sapiens (Human)	358
+PTGIR	P43119	reviewed	PI2R_HUMAN	Prostacyclin receptor (Prostaglandin I2 receptor) (PGI receptor) (PGI2 receptor) (Prostanoid IP receptor)	PTGIR PRIPR	Homo sapiens (Human)	386
+LPAR6	P43657	reviewed	LPAR6_HUMAN	Lysophosphatidic acid receptor 6 (LPA receptor 6) (LPA-6) (Oleoyl-L-alpha-lysophosphatidic acid receptor) (P2Y purinoceptor 5) (P2Y5) (Purinergic receptor 5) (RB intron encoded G-protein coupled receptor)	LPAR6 P2RY5	Homo sapiens (Human)	344
+BDKRB1	P46663	reviewed	BKRB1_HUMAN	B1 bradykinin receptor (B1R) (BK-1 receptor)	BDKRB1 BRADYB1	Homo sapiens (Human)	353
+GALR1	P47211	reviewed	GALR1_HUMAN	Galanin receptor type 1 (GAL1-R) (GALR-1)	GALR1 GALNR GALNR1	Homo sapiens (Human)	349
+P2RY1	P47900	reviewed	P2RY1_HUMAN	P2Y purinoceptor 1 (P2Y1) (ADP receptor) (Purinergic receptor)	P2RY1	Homo sapiens (Human)	373
+AVPR1B	P47901	reviewed	V1BR_HUMAN	Vasopressin V1b receptor (V1bR) (AVPR V1b) (AVPR V3) (Antidiuretic hormone receptor 1b) (Vasopressin V3 receptor)	AVPR1B AVPR3 VPR3	Homo sapiens (Human)	424
+MTNR1A	P48039	reviewed	MTR1A_HUMAN	Melatonin receptor type 1A (Mel-1A-R) (Mel1a receptor)	MTNR1A	Homo sapiens (Human)	350
+NPBWR1	P48145	reviewed	NPBW1_HUMAN	Neuropeptides B/W receptor type 1 (G-protein coupled receptor 7)	NPBWR1 GPR7	Homo sapiens (Human)	328
+GIPR	P48546	reviewed	GIPR_HUMAN	Gastric inhibitory polypeptide receptor (GIP-R) (Glucose-dependent insulinotropic polypeptide receptor)	GIPR	Homo sapiens (Human)	466
+PTH2R	P49190	reviewed	PTH2R_HUMAN	Parathyroid hormone 2 receptor (PTH2 receptor)	PTH2R PTHR2	Homo sapiens (Human)	550
+MTNR1B	P49286	reviewed	MTR1B_HUMAN	Melatonin receptor type 1B (Mel-1B-R) (Mel1b receptor)	MTNR1B	Homo sapiens (Human)	362
+PRLHR	P49683	reviewed	PRLHR_HUMAN	Prolactin-releasing peptide receptor (PrRP receptor) (PrRPR) (G-protein coupled receptor 10) (hGR3)	PRLHR GPR10 GR3	Homo sapiens (Human)	370
+HTR6	P50406	reviewed	5HT6R_HUMAN	5-hydroxytryptamine receptor 6 (5-HT-6) (5-HT6) (Serotonin receptor 6)	HTR6	Homo sapiens (Human)	440
+P2RY4	P51582	reviewed	P2RY4_HUMAN	P2Y purinoceptor 4 (P2Y4) (P2P) (Uridine nucleotide receptor) (UNR)	P2RY4 NRU	Homo sapiens (Human)	365
+F2RL1	P55085	reviewed	PAR2_HUMAN	Proteinase-activated receptor 2 (PAR-2) (Coagulation factor II receptor-like 1) (G-protein coupled receptor 11) (Thrombin receptor-like 1) [Cleaved into: Proteinase-activated receptor 2, alternate cleaved 1; Proteinase-activated receptor 2, alternate cleaved 2]	F2RL1 GPR11 PAR2	Homo sapiens (Human)	397
+MC1R	Q01726	reviewed	MSHR_HUMAN	Melanocyte-stimulating hormone receptor (MSH-R) (Melanocortin receptor 1) (MC1-R)	MC1R MSHR	Homo sapiens (Human)	317
+PTH1R	Q03431	reviewed	PTH1R_HUMAN	Parathyroid hormone/parathyroid hormone-related peptide receptor (PTH/PTHrP type I receptor) (PTH/PTHr receptor) (Parathyroid hormone 1 receptor) (PTH1 receptor)	PTH1R PTHR PTHR1	Homo sapiens (Human)	593
+PTGDR	Q13258	reviewed	PD2R_HUMAN	Prostaglandin D2 receptor (PGD receptor) (PGD2 receptor) (Prostanoid DP receptor)	PTGDR	Homo sapiens (Human)	359
+GPR17	Q13304	reviewed	GPR17_HUMAN	Uracil nucleotide/cysteinyl leukotriene receptor (UDP/CysLT receptor) (G-protein coupled receptor 17) (P2Y-like receptor) (R12)	GPR17	Homo sapiens (Human)	367
+HTR4	Q13639	reviewed	5HT4R_HUMAN	5-hydroxytryptamine receptor 4 (5-HT-4) (5-HT4) (Serotonin receptor 4)	HTR4	Homo sapiens (Human)	388
+P2RY6	Q15077	reviewed	P2RY6_HUMAN	P2Y purinoceptor 6 (P2Y6)	P2RY6 PP2891	Homo sapiens (Human)	328
+P2RY14	Q15391	reviewed	P2Y14_HUMAN	P2Y purinoceptor 14 (P2Y14) (G-protein coupled receptor 105) (UDP-glucose receptor)	P2RY14 GPR105 KIAA0001	Homo sapiens (Human)	338
+LTB4R	Q15722	reviewed	LT4R1_HUMAN	Leukotriene B4 receptor 1 (LTB4-R 1) (LTB4-R1) (Chemoattractant receptor-like 1) (G-protein coupled receptor 16) (P2Y purinoceptor 7) (P2Y7)	LTB4R BLT BLT1 BLTR CMKRL1 GPR16 P2RY7	Homo sapiens (Human)	352
+FFAR4	Q5NUL3	reviewed	FFAR4_HUMAN	Free fatty acid receptor 4 (G-protein coupled receptor 120) (G-protein coupled receptor 129) (G-protein coupled receptor GT01) (G-protein coupled receptor PGR4) (Omega-3 fatty acid receptor 1)	FFAR4 GPR120 GPR129 O3FAR1 PGR4	Homo sapiens (Human)	361
+GPR119	Q8TDV5	reviewed	GP119_HUMAN	Glucose-dependent insulinotropic receptor (G-protein coupled receptor 119)	GPR119	Homo sapiens (Human)	335
+LPAR1	Q92633	reviewed	LPAR1_HUMAN	Lysophosphatidic acid receptor 1 (LPA receptor 1) (LPA-1) (Lysophosphatidic acid receptor Edg-2)	LPAR1 EDG2 LPA1	Homo sapiens (Human)	364
+GHSR	Q92847	reviewed	GHSR_HUMAN	Growth hormone secretagogue receptor type 1 (GHS-R) (GH-releasing peptide receptor) (GHRP) (Ghrelin receptor)	GHSR	Homo sapiens (Human)	366
+KISS1R	Q969F8	reviewed	KISSR_HUMAN	KiSS-1 receptor (KiSS-1R) (G-protein coupled receptor 54) (G-protein coupled receptor OT7T175) (hOT7T175) (Hypogonadotropin-1) (Kisspeptins receptor) (Metastin receptor)	KISS1R AXOR12 GPR54	Homo sapiens (Human)	398
+MCHR2	Q969V1	reviewed	MCHR2_HUMAN	Melanin-concentrating hormone receptor 2 (MCH receptor 2) (MCH-R2) (MCHR-2) (G-protein coupled receptor 145) (GPRv17) (MCH-2R) (MCH2) (MCH2R)	MCHR2 GPR145 SLT	Homo sapiens (Human)	340
+P2RY11	Q96G91	reviewed	P2Y11_HUMAN	P2Y purinoceptor 11 (P2Y11)	P2RY11	Homo sapiens (Human)	374
+MRGPRX2	Q96LB1	reviewed	MRGX2_HUMAN	Mas-related G-protein coupled receptor member X2	MRGPRX2 MRGX2	Homo sapiens (Human)	330
+MRGPRX1	Q96LB2	reviewed	MRGX1_HUMAN	Mas-related G-protein coupled receptor member X1 (Sensory neuron-specific G-protein coupled receptor 3/4)	MRGPRX1 MRGX1 SNSR3 SNSR4	Homo sapiens (Human)	322
+OXGR1	Q96P68	reviewed	OXGR1_HUMAN	2-oxoglutarate receptor 1 (Alpha-ketoglutarate receptor 1) (G-protein coupled receptor 80) (G-protein coupled receptor 99) (P2Y purinoceptor 15) (P2Y15) (P2Y-like GPCR) (P2Y-like nucleotide receptor)	OXGR1 GPR80 GPR99 P2RY15 P2Y15	Homo sapiens (Human)	337
+F2RL3	Q96RI0	reviewed	PAR4_HUMAN	Proteinase-activated receptor 4 (PAR-4) (Coagulation factor II receptor-like 3) (Thrombin receptor-like 3)	F2RL3 PAR4	Homo sapiens (Human)	385
+S1PR3	Q99500	reviewed	S1PR3_HUMAN	Sphingosine 1-phosphate receptor 3 (S1P receptor 3) (S1P3) (Endothelial differentiation G-protein coupled receptor 3) (Sphingosine 1-phosphate receptor Edg-3) (S1P receptor Edg-3)	S1PR3 C9orf108 C9orf47 EDG3	Homo sapiens (Human)	378
+LPAR4	Q99677	reviewed	LPAR4_HUMAN	Lysophosphatidic acid receptor 4 (LPA receptor 4) (LPA-4) (G-protein coupled receptor 23) (P2Y purinoceptor 9) (P2Y9) (P2Y5-like receptor) (Purinergic receptor 9)	LPAR4 GPR23 LPA4 P2RY9	Homo sapiens (Human)	370
+MCHR1	Q99705	reviewed	MCHR1_HUMAN	Melanin-concentrating hormone receptor 1 (MCH receptor 1) (MCH-R1) (MCHR-1) (G-protein coupled receptor 24) (MCH-1R) (MCH1R) (MCHR) (SLC-1) (Somatostatin receptor-like protein)	MCHR1 GPR24 SLC1	Homo sapiens (Human)	353
+P2RY13	Q9BPV8	reviewed	P2Y13_HUMAN	P2Y purinoceptor 13 (P2Y13) (G-protein coupled receptor 86) (G-protein coupled receptor 94)	P2RY13 GPR86 GPR94 FKSG77	Homo sapiens (Human)	354
+GPR174	Q9BXC1	reviewed	GP174_HUMAN	Probable G-protein coupled receptor 174	GPR174 FKSG79 GPCR17	Homo sapiens (Human)	333
+NMUR2	Q9GZQ4	reviewed	NMUR2_HUMAN	Neuromedin-U receptor 2 (NMU-R2) (G-protein coupled receptor FM-4) (G-protein coupled receptor TGR-1)	NMUR2 NMU2R TGR1	Homo sapiens (Human)	415
+NPFFR1	Q9GZQ6	reviewed	NPFF1_HUMAN	Neuropeptide FF receptor 1 (G-protein coupled receptor 147) (RFamide-related peptide receptor OT7T022)	NPFFR1 GPR147 NPFF1	Homo sapiens (Human)	430
+LPAR5	Q9H1C0	reviewed	LPAR5_HUMAN	Lysophosphatidic acid receptor 5 (LPA receptor 5) (LPA-5) (G-protein coupled receptor 92) (G-protein coupled receptor 93)	LPAR5 GPR92 GPR93	Homo sapiens (Human)	372
+S1PR5	Q9H228	reviewed	S1PR5_HUMAN	Sphingosine 1-phosphate receptor 5 (S1P receptor 5) (S1P5) (Endothelial differentiation G-protein-coupled receptor 8) (Sphingosine 1-phosphate receptor Edg-8) (S1P receptor Edg-8)	S1PR5 EDG8	Homo sapiens (Human)	398
+P2RY12	Q9H244	reviewed	P2Y12_HUMAN	P2Y purinoceptor 12 (P2Y12) (ADP-glucose receptor) (ADPG-R) (P2T(AC)) (P2Y(AC)) (P2Y(cyc)) (P2Y12 platelet ADP receptor) (P2Y(ADP)) (SP1999)	P2RY12 HORK3	Homo sapiens (Human)	342
+HRH4	Q9H3N8	reviewed	HRH4_HUMAN	Histamine H4 receptor (H4R) (HH4R) (AXOR35) (G-protein coupled receptor 105) (GPRv53) (Pfi-013) (SP9144)	HRH4 GPCR105	Homo sapiens (Human)	390
+NMUR1	Q9HB89	reviewed	NMUR1_HUMAN	Neuromedin-U receptor 1 (NMU-R1) (G-protein coupled receptor 66) (G-protein coupled receptor FM-3)	NMUR1 GPR66	Homo sapiens (Human)	426
+LPAR2	Q9HBW0	reviewed	LPAR2_HUMAN	Lysophosphatidic acid receptor 2 (LPA receptor 2) (LPA-2) (Lysophosphatidic acid receptor Edg-4)	LPAR2 EDG4 LPA2	Homo sapiens (Human)	348
+GPR35	Q9HC97	reviewed	GPR35_HUMAN	G-protein coupled receptor 35 (Kynurenic acid receptor) (KYNA receptor)	GPR35	Homo sapiens (Human)	309
+LTB4R2	Q9NPC1	reviewed	LT4R2_HUMAN	Leukotriene B4 receptor 2 (LTB4-R 2) (LTB4-R2) (LTB4 receptor JULF2) (Leukotriene B4 receptor BLT2) (Seven transmembrane receptor BLTR2)	LTB4R2 BLT2R BLTR2	Homo sapiens (Human)	358
+GPR84	Q9NQS5	reviewed	GPR84_HUMAN	G-protein coupled receptor 84 (Inflammation-related G-protein coupled receptor EX33)	GPR84 EX33	Homo sapiens (Human)	396
+CYSLTR2	Q9NS75	reviewed	CLTR2_HUMAN	Cysteinyl leukotriene receptor 2 (CysLTR2) (G-protein coupled receptor GPCR21) (hGPCR21) (G-protein coupled receptor HG57) (HPN321)	CYSLTR2 CYSLT2 CYSLT2R PSEC0146	Homo sapiens (Human)	346
+LPAR3	Q9UBY5	reviewed	LPAR3_HUMAN	Lysophosphatidic acid receptor 3 (LPA receptor 3) (LPA-3) (Lysophosphatidic acid receptor Edg-7)	LPAR3 EDG7 LPA3	Homo sapiens (Human)	353
+UTS2R	Q9UKP6	reviewed	UR2R_HUMAN	Urotensin-2 receptor (UR-2-R) (G-protein coupled receptor 14) (Urotensin II receptor) (UR-II-R)	UTS2R GPR14	Homo sapiens (Human)	389
+GPR132	Q9UNW8	reviewed	GP132_HUMAN	Probable G-protein coupled receptor 132 (G2 accumulation protein)	GPR132 G2A	Homo sapiens (Human)	380
+GPR34	Q9UPC5	reviewed	GPR34_HUMAN	Probable G-protein coupled receptor 34	GPR34	Homo sapiens (Human)	381
+CYSLTR1	Q9Y271	reviewed	CLTR1_HUMAN	Cysteinyl leukotriene receptor 1 (CysLTR1) (Cysteinyl leukotriene D4 receptor) (LTD4 receptor) (G-protein coupled receptor HG55) (HMTMF81)	CYSLTR1 CYSLT1	Homo sapiens (Human)	337
+GPR55	Q9Y2T6	reviewed	GPR55_HUMAN	G-protein coupled receptor 55	GPR55	Homo sapiens (Human)	319
+HRH3	Q9Y5N1	reviewed	HRH3_HUMAN	Histamine H3 receptor (H3R) (HH3R) (G-protein coupled receptor 97)	HRH3 GPCR97	Homo sapiens (Human)	445
+NPFFR2	Q9Y5X5	reviewed	NPFF2_HUMAN	Neuropeptide FF receptor 2 (G-protein coupled receptor 74) (G-protein coupled receptor HLWAR77) (Neuropeptide G-protein coupled receptor)	NPFFR2 GPR74 NPFF2 NPGPR	Homo sapiens (Human)	522
