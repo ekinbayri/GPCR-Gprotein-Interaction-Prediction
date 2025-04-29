@@ -1,77 +1,56 @@
 # Yous should change for the dataset you want to train on 
 import os
-from transformers import T5EncoderModel, T5Tokenizer
 import torch
 import numpy as np
 import h5py
-import time
-from tqdm import tqdm
-from Bio import SeqIO
-import numpy as np
-import math
 import pandas as pd
 import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras.layers import Dense, Input, Dropout, BatchNormalization, ReLU, LeakyReLU, Conv1D, GlobalMaxPooling1D, AveragePooling1D, MaxPooling1D, GlobalAveragePooling1D
-from tensorflow.keras.layers import concatenate, multiply, Bidirectional, LSTM, GRU, Flatten, PReLU, add, SpatialDropout1D
-from tensorflow.keras.optimizers import SGD, Adam
+from tensorflow.keras.layers import Dense, Input, Dropout, BatchNormalization, Conv1D, GlobalMaxPooling1D, AveragePooling1D, MaxPooling1D, GlobalAveragePooling1D
+from tensorflow.keras.layers import concatenate, SpatialDropout1D
+from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models import Model
-from tensorflow.keras.regularizers import l2, l1_l2
-from sklearn.preprocessing import StandardScaler, MinMaxScaler
-from sklearn.preprocessing import RobustScaler
-from sklearn.model_selection import StratifiedKFold
-from sklearn.metrics import roc_curve
-import matplotlib.pyplot as plt
-from sklearn.metrics import roc_auc_score, precision_recall_curve
 import sklearn.metrics as metrics
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import matthews_corrcoef,accuracy_score, precision_score,recall_score
 from sklearn.manifold import TSNE
-import os
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 from tensorflow.keras import mixed_precision
-from sklearn.model_selection import train_test_split
-import h5py
-import time
-from tqdm import tqdm
 from tensorflow.keras.utils import get_custom_objects
-import os
 import argparse
-
-
-
-def _fixup_shape(x1, x2, y):
-  x1.set_shape((seq_size, dim))
-  x2.set_shape((seq_size, dim)) 
-  y.set_shape(()) 
-
-  return (x1, x2), y
 
 def pad(rst, length=1200, dim=1024):
   if len(rst) > length:
-      return rst[:length]
+    return rst[:length]
   elif len(rst) < length:
-      return np.concatenate((rst, np.zeros((length - len(rst), dim))))
+    return np.concatenate((rst, np.zeros((length - len(rst), dim))))
   return rst
 
-def funct(pair_dataframe):
-    tf_data1 = []
-    tf_data2 = []  
-    tf_label = []
-    
-    for i in range(len(pair_dataframe)):
-        x1= pad(embedding_dict[pair_dataframe['p1'][i]])
-        x2= pad(embedding_dict[pair_dataframe['p2'][i]])
-        y = pair_dataframe['label'][i]
-        tf_data1.append(x1)
-        tf_data2.append(x2)
-        tf_label.append(y)
-    tf_data1 = tf.convert_to_tensor(tf_data1, dtype=tf.float16)
-    tf_data2 = tf.convert_to_tensor(tf_data2, dtype=tf.float16)
-    tf_label = tf.convert_to_tensor(tf_label, dtype=tf.float16)
-   
+class generator:
+  def __init__(self, embedding_file, dataframe):
+    self.embedding_file = embedding_file
+    self.dataframe = dataframe
+  def __call__(self):
+    with h5py.File(self.embedding_file, 'r') as embedding_matrix:
+      for i in range(len(self.dataframe)):
+        p1 = embedding_matrix[self.dataframe['p1'][i]]
+        p1 = np.array(p1)
+        x1= pad(p1)
+        p2 = embedding_matrix[self.dataframe['p2'][i]]
+        p2 = np.array(p2)
+        x2= pad(p2)
+        y = self.dataframe['label'][i]
+        x1= tf.convert_to_tensor(x1,dtype=tf.float16)
+        x2= tf.convert_to_tensor(x2,dtype=tf.float16)
+        y= tf.convert_to_tensor(y,dtype=tf.float16)
+        yield (x1,x2),y
 
-    return tf_data1, tf_data2, tf_label
+def _fixup_shape(x):
+    x1,x2,y = x
+    x1.set_shape((seq_size, dim))
+    x2.set_shape((seq_size, dim)) 
+    y.set_shape(()) 
+
+    return (x1, x2), y
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -107,6 +86,10 @@ if __name__ == '__main__':
         "--epoch", type=int, default = 40,
         help = "epoch number"
     )
+    parser.add_argument(
+    "--batch_size",type = int, default=64,
+    help = "batch size for loop" 
+    )
   
     args = parser.parse_args()       
     seq_path =  args.fasta_file
@@ -128,157 +111,20 @@ if __name__ == '__main__':
     assert per_protein is True or per_residue is True or sec_struct is True, print(
         "Minimally, you need to active per_residue, per_protein or sec_struct. (or any combination)")
 
-    def read_fasta( fasta_path, split_char="!", id_field=0):
-        '''
-            Reads in fasta file containing multiple sequences.
-            Split_char and id_field allow to control identifier extraction from header.
-            E.g.: set split_char="|" and id_field=1 for SwissProt/UniProt Headers.
-            Returns dictionary holding multiple sequences or only single 
-            sequence, depending on input file.
-        '''
-      
-        seqs = dict()
-        with open( fasta_path, 'r' ) as fasta_f:
-            for line in fasta_f:
-                # get uniprot ID from header and create new entry
-                if line.startswith('>'):
-                    uniprot_id = line.replace('>', '').strip().split(split_char)[id_field]
-                    # replace tokens that are mis-interpreted when loading h5
-                    uniprot_id = uniprot_id.replace("/","_").replace(".","_")
-                    seqs[ uniprot_id ] = ''
-                else:
-                    # repl. all whie-space chars and join seqs spanning multiple lines, drop gaps and cast to upper-case
-                    seq= ''.join( line.split() ).upper().replace("-","")
-                    # repl. all non-standard AAs and map them to unknown/X
-                    seq = seq.replace('U','X').replace('Z','X').replace('O','X')
-                    seqs[ uniprot_id ] += seq 
-        example_id=next(iter(seqs))
-        print("Read {} sequences.".format(len(seqs)))
-        print("Example:\n{}\n{}".format(example_id,seqs[example_id]))
 
-        return seqs
 
 
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     print("Using {}".format(device))
 
-    def get_T5_model():
-        model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_half_uniref50-enc")
-        model = model.to(device) # move model to GPU
-        model = model.eval() # set model to evaluation model
-        tokenizer = T5Tokenizer.from_pretrained('Rostlab/prot_t5_xl_half_uniref50-enc', do_lower_case=False)
-
-        return model, tokenizer
-
-    def get_embeddings( model, tokenizer, seqs, per_residue, per_protein, sec_struct, 
-                      max_residues=4000, max_seq_len=1000, max_batch=100 ):
-
-        if sec_struct:
-          sec_struct_model = load_sec_struct_model()
-
-        results = {"residue_embs" : dict(), 
-                  "protein_embs" : dict(),
-                  "sec_structs" : dict() 
-                  }
-
-        # sort sequences according to length (reduces unnecessary padding --> speeds up embedding)
-        seq_dict   = sorted( seqs.items(), key=lambda kv: len( seqs[kv[0]] ), reverse=True )
-        start = time.time()
-        batch = list()
-        for seq_idx, (pdb_id, seq) in tqdm(enumerate(seq_dict,1)):
-            seq = seq
-            seq_len = len(seq)
-            seq = ' '.join(list(seq))
-            batch.append((pdb_id,seq,seq_len))
-
-            # count residues in current batch and add the last sequence length to
-            # avoid that batches with (n_res_batch > max_residues) get processed 
-            n_res_batch = sum([ s_len for  _, _, s_len in batch ]) + seq_len 
-            if len(batch) >= max_batch or n_res_batch>=max_residues or seq_idx==len(seq_dict) or seq_len>max_seq_len:
-                pdb_ids, seqs, seq_lens = zip(*batch)
-                batch = list()
-
-                # add_special_tokens adds extra token at the end of each sequence
-                token_encoding = tokenizer.batch_encode_plus(seqs, add_special_tokens=True, padding="longest")
-                input_ids      = torch.tensor(token_encoding['input_ids']).to(device)
-                attention_mask = torch.tensor(token_encoding['attention_mask']).to(device)
-                
-                try:
-                    with torch.no_grad():
-                        # returns: ( batch-size x max_seq_len_in_minibatch x embedding_dim )
-                        embedding_repr = model(input_ids, attention_mask=attention_mask)
-                except RuntimeError:
-                    print("RuntimeError during embedding for {} (L={})".format(pdb_id, seq_len))
-                    continue
-
-                if sec_struct: # in case you want to predict secondary structure from embeddings
-                  d3_Yhat, d8_Yhat, diso_Yhat = sec_struct_model(embedding_repr.last_hidden_state)
-
-
-                for batch_idx, identifier in enumerate(pdb_ids): # for each protein in the current mini-batch
-                    s_len = seq_lens[batch_idx]
-                    # slice off padding --> batch-size x seq_len x embedding_dim  
-                    emb = embedding_repr.last_hidden_state[batch_idx,:s_len]
-                    if sec_struct: # get classification results
-                        results["sec_structs"][identifier] = torch.max( d3_Yhat[batch_idx,:s_len], dim=1 )[1].detach().cpu().numpy().squeeze()
-                    if per_residue: # store per-residue embeddings (Lx1024)
-                        results["residue_embs"][ identifier ] = emb.detach().cpu().numpy().squeeze()
-                    if per_protein: # apply average-pooling to derive per-protein embeddings (1024-d)
-                        protein_emb = emb.mean(dim=0)
-                        results["protein_embs"][identifier] = protein_emb.detach().cpu().numpy().squeeze()
-
-
-        passed_time=time.time()-start
-        avg_time = passed_time/len(results["residue_embs"]) if per_residue else passed_time/len(results["protein_embs"])
-        print('\n############# EMBEDDING STATS #############')
-        print('Total number of per-residue embeddings: {}'.format(len(results["residue_embs"])))
-        print('Total number of per-protein embeddings: {}'.format(len(results["protein_embs"])))
-        print("Time for generating embeddings: {:.1f}[m] ({:.3f}[s/protein])".format(
-            passed_time/60, avg_time ))
-        print('\n############# END #############')
-        return results
-    #OPTION 1 REWRITE THIS WITH TFRECORD
-    def save_embeddings(emb_dict,out_path):
-        with h5py.File(str(out_path), "w") as hf:
-            for sequence_id, embedding in emb_dict.items(): #
-                print(sequence_id)
-                print(type(embedding))
-                # noinspection PyUnboundLocalVariable
-                hf.create_dataset(sequence_id, data=embedding)
-        return None
+   
+    
+   
   #OPTION 2 HDF5 stackoverflow get specific key instead of loading each of them
 
-    if os.path.isfile(per_residue_path) == False:
-      # Load the encoder part of ProtT5-XL-U50 in half-precision (recommended)
-      model, tokenizer = get_T5_model()
-      ''' 
-      seqs = dict()
-      for seq_record in SeqIO.parse(seq_path, "fasta"):
-        if len(seq_record.seq) > 1200:
-            seqs[seq_record.id] = str(seq_record.seq[:1200])
-        else:
-            seqs[seq_record.id] = str(seq_record.seq)
-      '''
-    # Load example fasta.
-      seqs = read_fasta( seq_path )
-      for id, seq in seqs.items():
-        if len(seq) > 1200:
-          seqs[id] = seq[:1200]
-
-      #OPTION 2 MAYBE DELETE THIS AND ADD OPT2 RESULTS = ENTIRE EMBEDDINGS
-      # Compute embeddings and/or secondary structure prediction
-      #DELETE RESULTS MAYBE HAS ALL EMBEDDINGS LOADED AGAIN LATER
-      results = get_embeddings( model, tokenizer, seqs,
-                                per_residue, per_protein, sec_struct)
-
-      # Store per-residue embeddings
-      if per_residue:
-        save_embeddings(results["residue_embs"], per_residue_path)
-      if per_protein:
-        save_embeddings(results["protein_embs"], per_protein_path)
-      del results
-    else:
+    if os.path.isfile(per_residue_path) == True:
       print("Already have the embedding file")
+
     
 
     ### Setting RAM GPU for training growth 
@@ -329,19 +175,12 @@ if __name__ == '__main__':
     # =================================================
     mixed_precision.set_global_policy('mixed_float16')
 
-    print("Load the embedding file")
-    embedding_matrix= h5py.File(per_residue_path, 'r')
-    protein_keys = list(embedding_matrix.keys())
-    embedding_dict = dict()
-
-    for key in tqdm(protein_keys):
-      embedding_dict[key] = np.array(embedding_matrix[key])
-
-      
-
 
     print("Load the pair dataset file")
-    
+    print(args.epoch)
+    print(args.batch_size)
+    #REWRITE COMPLETELY CURRENT TASK 16/05
+    #LOAD AS BATCHES TRAIN WITH BATCHES
     train_dataframe = pd.read_csv(args.training_tsv, sep = '\t', header = None)
     train_array  = train_dataframe.to_numpy()
     train_dataframe = pd.DataFrame(train_array, columns = ['p1', 'p2', 'label'])
@@ -361,57 +200,40 @@ if __name__ == '__main__':
     test_dataframe['p2'] = test_dataframe['p2'].str.replace(".","_")
 
 
-    def pad(rst, length=1200, dim=1024):
-        if len(rst) > length:
-            return rst[:length]
-        elif len(rst) < length:
-            return np.concatenate((rst, np.zeros((length - len(rst), dim))))
-        return rst
-
-    embedding_matrix= h5py.File(per_residue_path, 'r')
-    protein_keys = list(embedding_matrix.keys())
-    embedding_dict = dict()
-
-    for key in protein_keys:
-      embedding_dict[key] = np.array(embedding_matrix[key])
-
-    def func(i, pair_dataframe):
-        i = i.numpy() # Decoding from the EagerTensor object
-        x1= pad(embedding_dict[pair_dataframe['p1'][i]])
-        x2= pad(embedding_dict[pair_dataframe['p2'][i]])
-        y = pair_dataframe['label'][i]
-        return x1, x2, y
-
-    
-    
-    BATCH_SIZE = 64
+   
     seq_size = 1200
     dim = 1024
     total_size = len(train_dataframe)
 
-    tf_data1, tf_data2, tf_label = funct(train_dataframe)
-    train_dataset = tf.data.Dataset.from_tensor_slices(((tf_data1,tf_data2),tf_label))
-    train_dataset = train_dataset.batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
+    
+    train_dataset = tf.data.Dataset.from_generator(
+       generator(args.embedding_residue,train_dataframe),
+       output_signature=((
+          tf.TensorSpec(shape=(seq_size,dim),dtype=tf.float16),
+          tf.TensorSpec(shape=(seq_size,dim),dtype=tf.float16)),
+          tf.TensorSpec(shape=(),dtype=tf.float16)))
+    train_dataset = train_dataset.batch(args.batch_size).prefetch(tf.data.AUTOTUNE)
+    
+  
+    validation_dataset = tf.data.Dataset.from_generator(generator(args.embedding_residue,validation_dataframe),output_signature=((
+          tf.TensorSpec(shape=(seq_size,dim),dtype=tf.float16),
+          tf.TensorSpec(shape=(seq_size,dim),dtype=tf.float16)),
+          tf.TensorSpec(shape=(),dtype=tf.float16)))
+    validation_dataset = validation_dataset.batch(args.batch_size).prefetch(tf.data.AUTOTUNE)
 
-    tf_data1, tf_data2, tf_label = funct(validation_dataframe)
-    validation_dataset = tf.data.Dataset.from_tensor_slices(((tf_data1,tf_data2),tf_label))
-    validation_dataset = validation_dataset.batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
-
-    tf_data1, tf_data2, tf_label = funct(test_dataframe)
-    test_dataset = tf.data.Dataset.from_tensor_slices(((tf_data1,tf_data2),tf_label))
-    test_dataset = test_dataset.batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
-
-   
-
+    
+    test_dataset = tf.data.Dataset.from_generator(generator(args.embedding_residue,test_dataframe),output_signature=((
+          tf.TensorSpec(shape=(seq_size,dim),dtype=tf.float16),
+          tf.TensorSpec(shape=(seq_size,dim),dtype=tf.float16)),
+          tf.TensorSpec(shape=(),dtype=tf.float16)))
+    test_dataset = test_dataset.batch(args.batch_size).prefetch(tf.data.AUTOTUNE)
 
 
     def leaky_relu(x, alpha = .2):
       return tf.keras.backend.maximum(alpha*x, x)
 
 
-    get_custom_objects().update({'leaky_relu': leaky_relu}
-                                
-                                )
+    get_custom_objects().update({'leaky_relu': leaky_relu})
     seq_size = 1200
     dim = 1024
     def multi_cnn():
@@ -549,7 +371,7 @@ if __name__ == '__main__':
 
 
     model = multi_cnn()
-    model.summary()
+    #model.summary()
     #tf.keras.utils.plot_model(model, show_shapes=True)
 
     checkpoint = args.checkpoint
@@ -568,11 +390,13 @@ if __name__ == '__main__':
           save_best_only=True,
           
           )
-
+      print(len(train_dataframe))
       # Train model with early stopping
       history = model.fit(
-          train_dataset,
-          validation_data=validation_dataset,
+          train_dataset.repeat(),
+          steps_per_epoch=int(len(train_dataframe)//args.batch_size),
+          validation_data=validation_dataset.repeat(),
+          validation_steps=int(len(validation_dataframe)//args.batch_size),
           epochs=args.epoch,  
           callbacks=[early_stopping, model_checkpoint])
     else:
