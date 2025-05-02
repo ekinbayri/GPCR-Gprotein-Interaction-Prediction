@@ -2,6 +2,7 @@
 import os
 import torch
 import numpy as np
+import math
 import h5py
 import pandas as pd
 import tensorflow as tf
@@ -390,13 +391,14 @@ if __name__ == '__main__':
           save_best_only=True,
           
           )
-      print(len(train_dataframe))
+      print("length of train dataframe: ",len(train_dataframe))
+      print("validation of validation dataframe: ",len(validation_dataframe))
       # Train model with early stopping
       history = model.fit(
           train_dataset.repeat(),
-          steps_per_epoch=int(len(train_dataframe)//args.batch_size),
+          steps_per_epoch=math.ceil(len(train_dataframe)/args.batch_size),
           validation_data=validation_dataset.repeat(),
-          validation_steps=int(len(validation_dataframe)//args.batch_size),
+          validation_steps=math.ceil(len(validation_dataframe)/args.batch_size),
           epochs=args.epoch,  
           callbacks=[early_stopping, model_checkpoint])
     else:
