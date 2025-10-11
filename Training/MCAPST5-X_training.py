@@ -423,7 +423,7 @@ if __name__ == '__main__':
         for layer in model.layers[:-17]:
             layer.trainable = False
 
-        #Compile the model again (FROM TENSORFLOW DOCS) DO WE NEED THIS
+       
 
         #adam = Adam(learning_rate=1e-3, amsgrad=True, epsilon=1e-6)
         #model.compile(optimizer=adam, loss='binary_crossentropy', metrics=['accuracy'])
@@ -640,5 +640,6 @@ if __name__ == '__main__':
         print(str(acc) + "\t" + str(prec) + "\t" + str(rec) + "\t" + str(spec) + "\t" + str(f1) + "\t" + str(mcc)+"\t nan"  + "\t" + str(prc) + "\n")
   """
     
+
 
 
